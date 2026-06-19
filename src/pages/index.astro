@@ -83,7 +83,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
         <a href="/blog" class="text-xs text-muted-foreground hover:text-foreground">All writing &rarr;</a>
       </div>
       <article class="grid gap-10 lg:grid-cols-2">
-        <a href={`/blog/${featured.slug}`} class="group block">
+        <a href={`/blog/${featured.slug}`} class="group block" aria-label={`Read ${featured.title}`}>
           <div class="aspect-[4/3] overflow-hidden rounded-md bg-muted">
             {
               featured.thumbnail && (
@@ -118,7 +118,13 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
             {
               featuredAuthor && (
                 <>
-                  <img src={featuredAuthor.avatar} alt="" width="28" height="28" class="h-7 w-7 rounded-full" />
+                  <Image
+                    src={featuredAuthor.avatar}
+                    alt=""
+                    width={28}
+                    height={28}
+                    class="h-7 w-7 rounded-full"
+                  />
                   <a href={`/authors/${featuredAuthor.slug}`} class="hover:text-foreground">{featuredAuthor.name}</a>
                   <span>&middot;</span>
                 </>
