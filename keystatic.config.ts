@@ -4,11 +4,6 @@ export default config({
   storage: {
     kind: 'github',
     repo: { owner: 'bradthomasdesign', name: 'livingsimple' },
-    githubApp: {
-      appId: process.env.KEYSTATIC_GITHUB_APP_ID!,
-      clientId: process.env.KEYSTATIC_GITHUB_CLIENT_ID!,
-      clientSecret: process.env.KEYSTATIC_GITHUB_CLIENT_SECRET!,
-    },
   },
   ui: {
     brand: { name: 'Living Simple — CMS' },
