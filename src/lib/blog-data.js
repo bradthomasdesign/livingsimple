@@ -3,53 +3,37 @@ import { getCollection } from "astro:content";
 const siteUrl = (
   import.meta.env.SITE_URL ||
   import.meta.env.PUBLIC_SITE_URL ||
-  "https://quietpages-eta.vercel.app"
+  "https://www.livingsimple.io"
 ).replace(/\/$/, "");
 
 export const authors = [
   {
-    slug: "elena-march",
-    name: "Elena March",
-    bio: "Writer & editor covering design, craft, and slow technology.",
+    slug: "living-simple",
+    name: "Living Simple",
+    bio: "Writing about intentional living, minimalism, and finding more in less.",
     longBio:
-      "Elena March writes about the quiet edges of design and technology. Previously an editor at two small magazines, she now publishes essays and field notes from a desk overlooking the harbour.",
-    avatar: "https://i.pravatar.cc/200?img=47",
-  },
-  {
-    slug: "samuel-okafor",
-    name: "Samuel Okafor",
-    bio: "Software engineer with a soft spot for typography and the open web.",
-    longBio:
-      "Samuel builds tools for writers and reads more than he ships. He believes the best interfaces are the ones you don't notice.",
-    avatar: "https://i.pravatar.cc/200?img=12",
-  },
-  {
-    slug: "mira-iwasaki",
-    name: "Mira Iwasaki",
-    bio: "Photographer and essayist based between Kyoto and Lisbon.",
-    longBio:
-      "Mira's work sits at the intersection of place, memory, and the everyday object. Her essays have appeared in a number of small but loved publications.",
-    avatar: "https://i.pravatar.cc/200?img=32",
+      "Living Simple is a space for anyone drawn to a quieter, more intentional life — whether that means downsizing, decluttering, slowing down, or just asking what actually matters. Essays, reflections, and practical ideas published regularly.",
+    avatar: "/images/avatar.jpg",
   },
 ];
 
 export const categories = [
+  { slug: "minimalism", name: "Minimalism" },
+  { slug: "tiny-living", name: "Tiny Living" },
+  { slug: "mindfulness", name: "Mindfulness" },
+  { slug: "sustainability", name: "Sustainability" },
   { slug: "essays", name: "Essays" },
-  { slug: "design", name: "Design" },
-  { slug: "engineering", name: "Engineering" },
-  { slug: "field-notes", name: "Field Notes" },
-  { slug: "interviews", name: "Interviews" },
 ];
 
 export const tags = [
-  { slug: "writing", name: "Writing" },
-  { slug: "typography", name: "Typography" },
   { slug: "minimalism", name: "Minimalism" },
-  { slug: "tools", name: "Tools" },
-  { slug: "travel", name: "Travel" },
-  { slug: "process", name: "Process" },
-  { slug: "web", name: "Web" },
-  { slug: "books", name: "Books" },
+  { slug: "decluttering", name: "Decluttering" },
+  { slug: "tiny-house", name: "Tiny House" },
+  { slug: "meditation", name: "Meditation" },
+  { slug: "intentional-living", name: "Intentional Living" },
+  { slug: "sustainability", name: "Sustainability" },
+  { slug: "slow-living", name: "Slow Living" },
+  { slug: "wellness", name: "Wellness" },
 ];
 
 const isoDate = (date) => date?.toISOString().slice(0, 10);
@@ -107,8 +91,8 @@ export const formatDate = (iso) =>
   });
 
 export const SITE = {
-  name: "Quiet Pages",
+  name: "Living Simple",
   description:
-    "An independent magazine on writing, design, and the slow web. Published occasionally, read closely.",
+    "A blog about minimalism, tiny living, mindfulness, and the art of doing more with less.",
   url: siteUrl,
 };
